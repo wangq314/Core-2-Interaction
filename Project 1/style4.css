@@ -7,7 +7,7 @@ h1 {
   font-family: "Noto Serif TC", serif;
   font-weight: 400;
   font-style: normal;
-  line-height: 300px;
+  line-height: 200px;
   margin: 0;
   margin-left: 3rem;
 }
@@ -36,6 +36,8 @@ p {
 
 .page-content {
   margin-left: 40%;
+  width: 55%;
+  margin-top:5%;
   margin-right: .5rem;
 }
 
