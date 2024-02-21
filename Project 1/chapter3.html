@@ -8,7 +8,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
-    <script src="/script3.js" defer></script>
   </head>
   <body>
     <div class="sidebar">
@@ -66,5 +65,41 @@
       paper, bright, but giving no impression of brilliance.
     </a></p>
     </div>
+    <script>
+      window.requestAnimFrame = (function () {
+        return function (callback) {
+          window.setTimeout(callback, 1000 / 60);
+        };
+      })();
+
+      document.addEventListener("DOMContentLoaded", function (event) {
+        var $paragraph = document.querySelector("p");
+        var shadowLimit = 200;
+
+        function updateShadow() {
+          var scrollY = window.scrollY || window.pageYOffset;
+          var shadowX = scrollY / 10;
+          var shadowY = scrollY / 10;
+
+          shadowX = shadowX > shadowLimit ? shadowLimit : shadowX;
+          shadowX = shadowX < shadowLimit * -1 ? shadowLimit * -1 : shadowX;
+          shadowY = shadowY > shadowLimit ? shadowLimit : shadowY;
+          shadowY = shadowY < shadowLimit * -1 ? shadowLimit * -1 : shadowY;
+
+          $paragraph.style.textShadow =
+            Math.ceil(shadowX) +
+            "px " +
+            Math.ceil(shadowY) +
+            "px " +
+            Math.abs((shadowX * shadowY) / 100) +
+            "px rgba(0,0,0,0.4)";
+        }
+        updateShadow();
+
+        window.addEventListener("scroll", function () {
+          requestAnimFrame(updateShadow);
+        });
+      });
+    </script>
   </body>
 </html>
