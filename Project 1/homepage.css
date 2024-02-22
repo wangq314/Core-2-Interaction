@@ -190,7 +190,7 @@ div.door {
   transition: all 1s;
 }
 
-div.door:hover {
+div.door.opened {
   -webkit-transform: scale(0.05, 1) skew(0deg, 20deg);
   -moz-transform: scale(0.05, 1) skew(0deg, 20deg);
   -o-transform: scale(0.05, 1) skew(0deg, 20deg);

@@ -1,6 +1,7 @@
 body {
   margin: 0;
   margin-top: 1rem;
+  background-color: black;
 }
 h1 {
   font-size: 300px;
@@ -14,10 +15,17 @@ h1 {
 
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(255, 255, 255);
 }
 
 p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4vh;
+  margin: 0;
+  color: rgb(255, 255, 255);
+}
+
+span {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 4vh;
   margin: 0;
@@ -39,7 +47,29 @@ p {
   width: 55%;
   margin-top:5%;
   margin-right: .5rem;
+  color: white;
 }
+
+.glowIn span {
+  animation: glow-in 0.8s both;
+}
+
+@keyframes glow-in {
+  from {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+    text-shadow: 0 0 15px rgb(255, 230, 0);
+  }
+  75% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
   h1 {
@@ -71,4 +101,8 @@ p {
   }
 
   
+}
+
+.nextpage{
+  text-shadow: rgb(255, 234, 1) 1px 0 10px;
 }

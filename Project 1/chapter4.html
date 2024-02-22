@@ -1,68 +1,84 @@
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="https://glitch.com/favicon.ico" />
-    <title>Hello World!</title>
-    <link rel="stylesheet" href="style4.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
-    <script src="/script4.js" defer></script>
-  </head>
-  <body>
-    <div class="sidebar">
-     <h1><a href="homepage.html">讚</a></h1>
-    </div>
-    <div class="page-content">
-    <p>
-      So dilute is the light there that no matter what the season, on fair 
-      days or cloudy, morning, midday, or evening, the pale, white glow 
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="https://glitch.com/favicon.ico" />
+  <title>Hello World!</title>
+  <link rel="stylesheet" href="style4.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+  
+</head>
+
+<body>
+  <div class="sidebar">
+    <h1><a href="homepage.html">讚</a></h1>
+  </div>
+  <div class="page-content">
+    <p class="glowIn">
+      So dilute is the light there that no matter what the season, on fair
+      days or cloudy, morning, midday, or evening, the pale, white glow
       scarcely varies
     </p>
     <br>
-    <p>
-      The light from the pale white paper, powerless to dispel the heavy 
-      darkness of the alcove, is instead repelled by the darkness, creating 
-      a world of confusion where dark and light are indistinguishable. 
+    <p class="glowIn">
+      The light from the pale white paper, powerless to dispel the heavy
+      darkness of the alcove, is instead repelled by the darkness, creating
+      a world of confusion where dark and light are indistinguishable.
     </p>
     <br>
-    <p>
-     Have you never felt a sort of fear in the face of the ageless, a fear 
-      that in that room you might lose all consciousness of the passage of 
-      time, that untold years might pass and upon emerging you should find 
+    <p class="glowIn">
+      Have you never felt a sort of fear in the face of the ageless, a fear
+      that in that room you might lose all consciousness of the passage of
+      time, that untold years might pass and upon emerging you should find
       you had grown old and gray?
     </p>
     <br>
-    <p>
-     How the gold leaf of a sliding door or screen will pick up a distant 
-      glimmer from the garden, then suddenly send forth an ethereal glow, 
-      a faint golden light cast into the enveloping darkness, like the glow 
+    <p class="glowIn">
+      How the gold leaf of a sliding door or screen will pick up a distant
+      glimmer from the garden, then suddenly send forth an ethereal glow,
+      a faint golden light cast into the enveloping darkness, like the glow
       upon the horizon at sunset.
     </p>
     <br>
-    <p>
-      Or again you may find that the gold dust of the background, which until 
-      that moment had only a dull, sleepy luster, will, as you move past, 
+    <p class="glowIn">
+      Or again you may find that the gold dust of the background, which until
+      that moment had only a dull, sleepy luster, will, as you move past,
       suddenly gleam forth as if it had burst into flame.
     </p>
     <br>
-    <p>
-      How, in such a dark place, gold draws so much light to itself is a 
+    <p class="glowIn">
+      How, in such a dark place, gold draws so much light to itself is a
       mystery to me.
     </p>
     <br>
-    <p>
-      Modem man, in his well-lit house, knows nothing of the beauty of gold; 
-      but those who lived in the dark houses of the past were not merely 
+    <p class="glowIn">
+      Modem man, in his well-lit house, knows nothing of the beauty of gold;
+      but those who lived in the dark houses of the past were not merely
       captivated by its beauty, they also knew its practical value.
     </p>
     <br>
     <p class="nextpage"><a href="homepage.html">
-      Silver and other metals quickly lose their gloss, but gold retains its 
-      brilliance indefinitely to light the darkness of the room. This is why 
-      gold was held in such incredibly high esteem.
-    </a></p>
-    </div>
-  </body>
+        Silver and other metals quickly lose their gloss, but gold retains its
+        brilliance indefinitely to light the darkness of the room. This is why
+        gold was held in such incredibly high esteem.
+      </a></p>
+  </div>
+
+</body>
+<script>
+  let glowInTexts = document.querySelectorAll(".glowIn");
+  glowInTexts.forEach(glowInText => {
+    let letters = glowInText.textContent.split("");
+    glowInText.textContent = "";
+    letters.forEach((letter, i) => {
+      let span = document.createElement("span");
+      span.textContent = letter;
+      span.style.animationDelay = `${i * 0.05}s`;
+      glowInText.append(span);
+    });
+  });
+</script>
 </html>
