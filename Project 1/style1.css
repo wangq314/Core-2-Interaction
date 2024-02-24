@@ -10,6 +10,25 @@ h1 {
   line-height: 200px;
   margin: 0;
   margin-left: 3rem;
+  text-shadow: 0 0 10px #ffffff,
+               0 0 20px #000000, 
+               0 0 40px #000000;
+}
+h1 span{
+  transition: .5s linear
+}
+h1:hover span:nth-child(1){
+  margin-right: 5px
+}
+h1:hover span:nth-child(1):after{
+  content: "";
+}
+h1:hover span:nth-child(2){
+  margin-left: 30px
+}
+h1:hover span{
+  color: #000000;
+  text-shadow: none;
 }
 
 a {

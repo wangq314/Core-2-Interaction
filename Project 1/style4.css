@@ -12,6 +12,34 @@ h1 {
   margin: 0;
   margin-left: 3rem;
 }
+#yellowglow {
+  font-size: 300px;
+  font-family: "Noto Serif TC", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 200px;
+  margin: 0;
+  text-shadow: 0 0 10px #fff,
+               0 0 20px #fff480, 
+               0 0 40px #ffd000;
+}
+h1 #yellowglow{
+  transition: .5s linear
+}
+h1:hover #yellowglow:nth-child(1){
+  margin-right: 5px
+}
+h1:hover #yellowglow:nth-child(1):after{
+  content: "";
+}
+h1:hover #yellowglow:nth-child(2){
+  margin-left: 30px
+}
+h1:hover #yellowglow{
+  color: #fff;
+  text-shadow:none;
+}
+
 
 a {
   text-decoration: none;

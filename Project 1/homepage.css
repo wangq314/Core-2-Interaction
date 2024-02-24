@@ -209,19 +209,21 @@ div.door.opened {
   .parent {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-column-gap:1vw;
-    grid-row-gap: 1vw;
+    grid-column-gap:2vw;
+    grid-row-gap: 2vw;
     grid-template-areas: 
             "a b"
             "c d"
             "e f"
             "g h";
     width: 100vw;
+    height: 100vh;
   }
 
   .mobile-top {
     grid-area: a;
   }
+
   .mobile-b {
     grid-area: b;
   }
