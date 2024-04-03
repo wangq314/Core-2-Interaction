@@ -1,70 +1,143 @@
 <html>
 <head>
-<title>Collection of Frisbee Discs</title>
+    <title>Collection of Frisbee Discs</title>
+    <meta charset="utf-8" />
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="mode2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/gill-sans-std" rel="stylesheet">
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("filterDiv");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass("") {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+        </script>
 </head>
+
 <body>
-    <h1>Collection of Frisbee Discs</h1>
+    <div class="modechangebutton">Collection of Frisbee Discs</div>
+    <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('have')"> Have</button>
+        <button class="btn" onclick="filterSelection('donthaveyet')"> Don't Have Yet</button>
+        <button class="btn" onclick="filterSelection('xcom')"> XCOM</button>
+        <button class="btn" onclick="filterSelection('discraft')"> Discraft</button>
+        <button class="btn" onclick="filterSelection('paperwork')"> Paperwork</button>
+        <button class="btn" onclick="filterSelection('feiyue')"><span class="chinese">飞跃</span></button>
+        <button class="btn" onclick="filterSelection('offesc')"> Offesc X <span class="chinese">野丸子</span></button>
+        <button class="btn" onclick="filterSelection('fuzzycrew')"> Fuzzy Crew</button>
+        <button class="btn" onclick="filterSelection('papervoice')"> Paper Voice</button>
+        <button class="btn" onclick="filterSelection('nvzili')"> <span class="chinese">女子力</span></button>
+        <button class="btn" onclick="filterSelection('mumianchufei')"><span class="chinese">木棉初飞</span> </button>
+        <button class="btn" onclick="filterSelection('shuiguo')"><span class="chinese">水果</span> </button>
+        <button class="btn" onclick="filterSelection('pandapan')"> PANDAPAN</button>
+        <button class="btn" onclick="filterSelection('aikexingqiu')"><span class="chinese">艾克星球</span></button>
+        <button class="btn" onclick="filterSelection('xuanxing')"><span class="chinese">炫星</span> </button>
+        <button class="btn" onclick="filterSelection('aifeipan')"><span class="chinese">爱飞盘</span> </button>
+        <button class="btn" onclick="filterSelection('ultrastar')"> ULTRASTAR SPORTDISC</button>
+        <button class="btn" onclick="filterSelection('160')"> 160 GRAM SKYSTYLER SPORTDISC</button>
+        <button class="btn" onclick="filterSelection('changshu')"> Changshu</button>
+        <button class="btn" onclick="filterSelection('shanghai')"> Shanghai</button>
+        <button class="btn" onclick="filterSelection('newyork')"> New York</button>
+      </div>
+    <div class="container">
     <div class="parent">
-        <div class="div1"><img src="Frisbee disc/1-1.png" width="100px"></div>
-        <div class="div2"><img src="Frisbee disc/1-2.png" width="100px"> </div>
-        <div class="div3"><img src="Frisbee disc/1-3.png" width="100px"> </div>
-        <div class="div4"><img src="Frisbee disc/1-4.png" width="100px"> </div>
-        <div class="div5"><img src="/Users/criswang/Desktop/Core 2 Interaction/Project 2/Frisbee disc/1-1.png" width="100px"> </div>
-        <div class="div6"><img src="/Users/criswang/Desktop/Core 2 Interaction/Project 2/Frisbee disc/1-1.png" width="100px"> </div>
-        <div class="div7"> </div>
-        <div class="div8"> </div>
-        <div class="div9"> </div>
-        <div class="div10"> </div>
-        <div class="div11"> </div>
-        <div class="div12"> </div>
-        <div class="div13"> </div>
-        <div class="div14"> </div>
-        <div class="div15"> </div>
-        <div class="div16"> </div>
-        <div class="div17"> </div>
-        <div class="div18"> </div>
-        <div class="div19"> </div>
-        <div class="div20"> </div>
-        <div class="div21"> </div>
-        <div class="div22"> </div>
-        <div class="div23"> </div>
-        <div class="div24"> </div>
-        <div class="div25"> </div>
-        <div class="div26"> </div>
-        <div class="div27"> </div>
-        <div class="div28"> </div>
-        <div class="div29"> </div>
-        <div class="div30"> </div>
-        <div class="div31"> </div>
-        <div class="div32"> </div>
-        <div class="div33"> </div>
-        <div class="div34"> </div>
-        <div class="div35"> </div>
-        <div class="div36"> </div>
-        <div class="div37"> </div>
-        <div class="div38"> </div>
-        <div class="div39"> </div>
-        <div class="div40"> </div>
-        <div class="div41"> </div>
-        <div class="div42"> </div>
-        <div class="div43"> </div>
-        <div class="div44"> </div>
-        <div class="div45"> </div>
-        <div class="div46"> </div>
-        <div class="div47"> </div>
-        <div class="div48"> </div>
-        <div class="div49"> </div>
-        <div class="div50"> </div>
-        <div class="div51"> </div>
-        <div class="div52"> </div>
-        <div class="div53"> </div>
-        <div class="div54"> </div>
-        <div class="div55"> </div>
-        <div class="div56"> </div>
-        <div class="div57"> </div>
-        <div class="div58"> </div>
-        <div class="div59"> </div>
-        <div class="div60"> </div>
-        </div>
+        <div class="div1 filterDiv paperwork" ><img src="Frisbee disc/1-1.png" width="200px"></div>
+        <div class="div2 filterDiv paperwork"><img src="Frisbee disc/1-2.png" width="200px"> </div>
+        <div class="div3 filterDiv paperwork"><img src="Frisbee disc/1-3.png" width="200px"> </div>
+        <div class="div4 filterDiv paperwork"><img src="Frisbee disc/1-4.png" width="200px"> </div>
+        <div class="div5 filterDiv feiyue"><img src="Frisbee disc/2-1.png" width="200px"> </div>
+        <div class="div6 filterDiv feiyue"><img src="Frisbee disc/2-2.png" width="200px"> </div>
+        <div class="div7 filterDiv feiyue"><img src="Frisbee disc/2-3.png" width="200px"> </div>
+        <div class="div8 filterDiv offesc"><img src="Frisbee disc/3-1.png" width="200px"> </div>
+        <div class="div9 filterDiv offesc"><img src="Frisbee disc/3-2.png" width="200px"> </div>
+        <div class="div10 filterDiv offesc"><img src="Frisbee disc/3-3.png" width="200px"> </div>
+        <div class="div11 filterDiv fuzzycrew"><img src="Frisbee disc/4-1.png" width="200px"> </div>
+        <div class="div12 filterDiv fuzzycrew"><img src="Frisbee disc/4-2.png" width="200px"> </div>
+        <div class="div13 filterDiv fuzzycrew"><img src="Frisbee disc/4-3.png" width="200px"> </div>
+        <div class="div14 filterDiv fuzzycrew"><img src="Frisbee disc/4-4.png" width="200px"> </div>
+        <div class="div15 filterDiv fuzzycrew"><img src="Frisbee disc/4-5.png" width="200px"> </div>
+        <div class="div16 filterDiv"><img src="Frisbee disc/5-1.png" width="200px"> </div>
+        <div class="div17 filterDiv"><img src="Frisbee disc/5-2.png" width="200px"> </div>
+        <div class="div18 filterDiv"><img src="Frisbee disc/5-3.png" width="200px"> </div>
+        <div class="div19 filterDiv"><img src="Frisbee disc/5-4.png" width="200px"> </div>
+        <div class="div20 filterDiv"><img src="Frisbee disc/5-5.png" width="200px"> </div>
+        <div class="div21 filterDiv"><img src="Frisbee disc/5-6.png" width="200px"> </div>
+        <div class="div22 filterDiv"><img src="Frisbee disc/5-7.png" width="200px"> </div>
+        <div class="div23 filterDiv"><img src="Frisbee disc/5-8.png" width="200px"> </div>
+        <div class="div24 filterDiv"><img src="Frisbee disc/6-1.png" width="200px"> </div>
+        <div class="div25 filterDiv"><img src="Frisbee disc/6-2.png" width="200px"> </div>
+        <div class="div26 filterDiv"><img src="Frisbee disc/7-1.png" width="200px"> </div>
+        <div class="div27 filterDiv"><img src="Frisbee disc/8-1.png" width="200px"> </div>
+        <div class="div28 filterDiv"><img src="Frisbee disc/8-2.png" width="200px"> </div>
+        <div class="div29 filterDiv"><img src="Frisbee disc/8-3.png" width="200px"> </div>
+        <div class="div30 filterDiv"><img src="Frisbee disc/9-1.png" width="200px"> </div>
+        <div class="div31 filterDiv"><img src="Frisbee disc/9-2.png" width="200px"> </div>
+        <div class="div32 filterDiv"><img src="Frisbee disc/9-3.png" width="200px"> </div>
+        <div class="div33 filterDiv"><img src="Frisbee disc/9-4.png" width="200px"> </div>
+        <div class="div34 filterDiv"><img src="Frisbee disc/9-5.png" width="200px"> </div>
+        <div class="div35 filterDiv"><img src="Frisbee disc/10-1.png" width="200px"> </div>
+        <div class="div36 filterDiv"><img src="Frisbee disc/10-2.png" width="200px"> </div>
+        <div class="div37 filterDiv"><img src="Frisbee disc/10-3.png" width="200px"> </div>
+        <div class="div38 filterDiv"><img src="Frisbee disc/11-1.png" width="200px"> </div>
+        <div class="div39 filterDiv"><img src="Frisbee disc/11-2.png" width="200px"> </div>
+        <div class="div40 filterDiv"><img src="Frisbee disc/11-3.png" width="200px"> </div>
+        <div class="div41 filterDiv"><img src="Frisbee disc/11-4.png" width="200px"> </div>
+        <div class="div42 filterDiv"><img src="Frisbee disc/11-5.png" width="200px"> </div>
+        <div class="div43 filterDiv"><img src="Frisbee disc/12.png" width="200px"> </div>
+        <div class="div44 filterDiv"><img src="Frisbee disc/13.png" width="200px"> </div>
+        <div class="div45 filterDiv"><img src="Frisbee disc/14-1.png" width="200px"> </div>
+        <div class="div46 filterDiv"><img src="Frisbee disc/14-2.png" width="200px"> </div>
+        <div class="div47 filterDiv"><img src="Frisbee disc/14-3.png" width="200px"> </div>
+        <div class="div48 filterDiv"><img src="Frisbee disc/14-4.png" width="200px"> </div>
+        <div class="div49 filterDiv"><img src="Frisbee disc/14-5.png" width="200px"> </div>
+        <div class="div50"><img src=""> </div>
+        <div class="div51"><img src=""> </div>
+        <div class="div52"><img src=""> </div>
+        <div class="div53"><img src=""> </div>
+        <div class="div54"><img src=""> </div>
+    </div>
+    </div>
 </body>
+
 </html>
