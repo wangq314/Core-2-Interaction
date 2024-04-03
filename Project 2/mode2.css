@@ -4,11 +4,16 @@
     line-height: 100px;
     text-decoration: underline 4px;
     text-underline-offset: 5px;
-   
 }
 
 .chinese{
     font-size: 26px;
+}
+
+.buttontitle{
+    font-family: 'Gill Sans', sans-serif;
+    font-size:30px;
+    margin: 1%;
 }
 
 .btn {
