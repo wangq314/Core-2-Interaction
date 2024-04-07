@@ -1,0 +1,81 @@
+.image-container {
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.image {
+    width: 250px;
+    height: 250px;
+}
+#hand-button{
+    border: none;
+    background: none;
+    position: absolute;
+    top: 26rem;
+    left: 21rem;
+    z-index: 10;
+}
+.hand{
+    width: 200px;
+}
+
+#next-disc-preview-container {
+    display: none;
+    position: absolute;
+    top: 15rem;
+    left: 10rem;
+    z-index: 2;
+}
+
+#throwing-disc-container {
+    position: absolute;
+    top: 15rem;
+    left: 10rem;
+    z-index: 3;
+}
+
+#disc-container {
+    height: max-content;
+    width: max-content;
+}
+
+
+
+.container {
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+    font-size: 25px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', sans-serif;
+}
+
+.disc {
+    display: inline-block;
+    width: 100px; 
+    height: 100px; 
+    margin-right: 770px; 
+    text-decoration: none;
+    color: black;
+    font-size: 60px;
+}
+
+.disc:hover{
+    font-size: 60px;
+    text-decoration: none;
+    color: rgb(255, 136, 0);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+
+
+.disc-title {
+    text-align: center;
+    z-index: 10;
+    visibility: hidden;
+}
