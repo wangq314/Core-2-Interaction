@@ -14,18 +14,19 @@
 </head>
 
 <body>
-    <div class="container"><a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html">
-            <div class="disc">COLLECTION OF FRISBEE DISCS</div>
-            <div class="disc">COLLECTION OF FRISBEE DISCS</div>
-            <div class="disc">COLLECTION OF FRISBEE DISCS</div>
-            <div class="disc">COLLECTION OF FRISBEE DISCS</div>
-            <div class="disc">COLLECTION OF FRISBEE DISCS</div>
-            <div class="disc">COLLECTION OF FRISBEE DISCS</div>
-            <div class="disc">COLLECTION OF FRISBEE DISCS</div>
-            <div class="disc">COLLECTION OF FRISBEE DISCS</div>
-            <div class="disc">COLLECTION OF FRISBEE DISCS</div>
-            <div class="disc">COLLECTION OF FRISBEE DISCS</div>
-        </a></div>
+    <div class="container">
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
+    </div>
+    <div class="container2">
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
+        
+    </div>
 
     <div id="disc-container">
         <div id="next-disc-preview-container" class="image-container">
@@ -147,7 +148,6 @@
         currentTimeout = setTimeout(() => {
             document.querySelector('#hand-image').src = throwHand;
         }, 200)
-        document.querySelector('.disc-title').style = 'visibility: hidden';
     }
 
 
@@ -166,6 +166,8 @@
     }
 
     function handleFrisbee() {
+        document.querySelector('.disc-title').style = 'visibility: hidden';
+
         if (nextIndex >= discs.length) {
             shuffleDiscs()
             nextIndex = 0
