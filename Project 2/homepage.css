@@ -8,30 +8,32 @@
     width: 250px;
     height: 250px;
 }
-#hand-button{
+
+#hand-button {
     border: none;
     background: none;
     position: absolute;
-    top: 26rem;
-    left: 21rem;
+    top: 47vh;
+    left: 47vh;
     z-index: 10;
 }
-.hand{
+
+.hand {
     width: 200px;
 }
 
 #next-disc-preview-container {
     display: none;
     position: absolute;
-    top: 15rem;
-    left: 10rem;
+    top: 30vh;
+    left: 20vh;
     z-index: 2;
 }
 
 #throwing-disc-container {
     position: absolute;
-    top: 15rem;
-    left: 10rem;
+    top: 30vh;
+    left: 20vh;
     z-index: 3;
 }
 
@@ -39,7 +41,6 @@
     height: max-content;
     width: max-content;
 }
-
 
 
 .container {
@@ -53,29 +54,34 @@
 
 .disc {
     display: inline-block;
-    width: 100px; 
-    height: 100px; 
-    margin-right: 770px; 
+    width: 100px;
+    height: 100px;
+    margin-right: 770px;
     text-decoration: none;
     color: black;
     font-size: 60px;
 }
 
-.disc:hover{
-    font-size: 60px;
+.disc:hover {
     text-decoration: none;
     color: rgb(255, 136, 0);
 }
 
 @keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .disc-title {
     text-align: center;
     z-index: 10;
     visibility: hidden;
+    font-family: 'Gill Sans', sans-serif;
 }
 
 
@@ -88,9 +94,86 @@
     color: black;
     font-family: 'Gill Sans', sans-serif;
     position: sticky;
-    margin-top: 43%;
+    margin-top: 77vh;
+
+}
+
+
+a {
+    text-decoration: none
 }
 
 
 
-a { text-decoration: none}
+@media only screen and (max-width: 600px) {
+    body {
+        overflow-x:hidden;
+    }
+    .image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .disc-title {
+        z-index: 10;
+        visibility: hidden;
+        margin-left: -95px;
+        font-size: 10px;
+        font-family: 'Gill Sans', sans-serif;
+    }
+    .container, .container2 {
+        animation: scroll 10s linear infinite;
+        font-size: 25px;
+    }
+
+    .disc {
+        font-size: 77px;
+        width: 230px;
+    }
+
+
+
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    #hand-button {
+        border: none;
+        background: none;
+        position: absolute;
+        top: 75vh;
+        left: 80vh;
+        z-index: 10;
+    }
+
+    .hand {
+        width: 90px;
+    }
+
+    #next-disc-preview-container {
+        display: none;
+        position: absolute;
+        top: 60vh;
+        left: 67vh;
+        z-index: 2;
+    }
+
+    #throwing-disc-container {
+        position: absolute;
+        top: 60vh;
+        left: 57vh;
+        z-index: 3;
+    }
+
+    #disc-container {
+        height: max-content;
+        width: max-content;
+    }
+
+}

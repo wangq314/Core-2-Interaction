@@ -1,6 +1,8 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
     <title>Collection of Frisbee Discs</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
@@ -15,17 +17,25 @@
 
 <body>
     <div class="container">
-        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
-        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
-        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
-        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE
+            DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE
+            DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE
+            DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE
+            DISCS</a>
     </div>
     <div class="container2">
-        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
-        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
-        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
-        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE DISCS</a>
-        
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE
+            DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE
+            DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE
+            DISCS</a>
+        <a href="/Users/criswang/Desktop/Core 2 Interaction/Project 2/mode2.html" class="disc">COLLECTION OF FRISBEE
+            DISCS</a>
+
     </div>
 
     <div id="disc-container">
@@ -35,7 +45,6 @@
         <div id="throwing-disc-container" class="image-container">
             <img id="discImage" class="image" src="Frisbee disc/1-1.png" width="300px" alt="Image" />
             <div class="disc-title">
-                <h3>Meow</h3>
             </div>
         </div>
     </div>
@@ -102,8 +111,9 @@
     let currentIndex = 0;
     let nextIndex = 1;
 
-    let animation = anime({
-        targets: '#throwing-disc-container',
+    // const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    const isMobile = window.screen.availHeight > window.screen.availWidth
+    let animationParams = {
         translateX: {
             value: 750,
             duration: 800
@@ -118,10 +128,44 @@
             duration: 1600,
             delay: 800,
             easing: 'easeInOutQuart'
-        },
+        }
+    }
+
+    
+
+    if (isMobile) {
+        console.log("is mobile")
+        animationParams = {
+            translateY: {
+                value: -220,
+                duration: 10,
+                
+            },  
+            rotate: {
+            value: 360,
+            duration: 1800,
+            easing: 'easeInOutSine'
+             },
+            scale: {
+            value: 1.6,
+            duration: 1600,
+            delay: 800,
+            easing: 'easeInOutQuart'
+        }
+        }
+        
+    } else {
+        console.log("is not mobile")
+
+    }
+
+
+    let animation = anime({
+        targets: '#throwing-disc-container',
         begin: startAnimation,
         complete: completeAnimation,
         delay: 250,
+        ...animationParams
     });
 
     (function initPage() {
