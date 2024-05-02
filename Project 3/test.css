@@ -1,0 +1,118 @@
+img{
+    width: 800px;
+    height: 800px;
+}
+
+
+
+
+
+
+/* Linked Path Group */
+#linked-path-group {
+    position: absolute;
+    width: 876.82px;
+    height: 863.62px;
+    transform: rotate(81.15deg);
+  }
+  
+  /* [Linked] Ellipse 8 */
+  #linked-ellipse-8 {
+    position: absolute;
+    width: 775.11px;
+    height: 775.11px;
+    transform: rotate(81.15deg);
+  }
+  
+  /* [Copy] 13 */
+  .copy-13 {
+    position: absolute;
+    font-family: 'Times';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 110px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.92em;
+    color: #000000;
+  }
+  
+  .copy-13:nth-of-type(1) {
+    width: 38.96px;
+    height: 89.28px;
+    transform: rotate(0deg);
+  }
+  
+  .copy-13:nth-of-type(2) {
+    width: 19.48px;
+    height: 89.28px;
+    transform: rotate(50.15deg);
+  }
+  
+  .copy-13:nth-of-type(3) {
+    width: 38.96px;
+    height: 89.28px;
+    transform: rotate(80.14deg);
+  }
+  
+  .copy-13:nth-of-type(4) {
+    width: 19.48px;
+    height: 89.28px;
+    transform: rotate(110.16deg);
+  }
+  
+  .copy-13:nth-of-type(5) {
+    width: 38.96px;
+    height: 89.28px;
+    transform: rotate(140.36deg);
+  }
+  
+  .copy-13:nth-of-type(6) {
+    width: 19.48px;
+    height: 89.28px;
+    transform: rotate(170.35deg);
+  }
+  
+  .copy-13:nth-of-type(7) {
+    width: 38.96px;
+    height: 89.28px;
+    transform: rotate(-159.62deg);
+  }
+  
+  .copy-13:nth-of-type(8) {
+    width: 19.48px;
+    height: 89.28px;
+    transform: rotate(-129.42deg);
+  }
+  
+  .copy-13:nth-of-type(9) {
+    width: 38.96px;
+    height: 89.28px;
+    transform: rotate(-99.44deg);
+  }
+  
+  .copy-13:nth-of-type(10) {
+    width: 19.48px;
+    height: 89.28px;
+    transform: rotate(-69.4deg);
+  }
+  
+  .copy-13:nth-of-type(11) {
+    width: 96px;
+    height: 110px;
+    transform: rotate(-39.21deg);
+  }
+  
+  .copy-13:nth-of-type(12) {
+    width: 19.48px;
+    height: 89.28px;
+    transform: rotate(-9.23deg);
+  }
+  
+  .copy-13:nth-of-type(13) {
+    width: 96px;
+    height: 110px;
+    transform: rotate(20.82deg);
+  }
+  

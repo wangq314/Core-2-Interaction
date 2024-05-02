@@ -1,0 +1,79 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #FCFC84;
+    display: grid;
+    width: 100vw;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+a:hover{
+    text-shadow: 0 0 15px rgb(255, 255, 255),0 0 35px rgb(255, 255, 255),0 0 35px rgb(255, 255, 255),0 0 35px rgb(255, 255, 255),0 0 35px rgb(255, 255, 255),0 0 35px rgb(255, 255, 255);
+}
+
+.homepagetitle{
+    text-align: center;
+    z-index: 100;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 40%;
+
+}
+
+.bigtitle{
+    font-size: 12vw;
+}
+
+.text {
+    font-weight: 300px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: Times, serif;
+    font-size: 40px;
+    fill: #000000;
+  }
+
+  #rotatingText {
+    animation-name: rotate-circle;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes rotate-circle {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+
+  .main {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    overflow:hidden;
+  }
+
+  .main img {
+    position: absolute;
+  }
+
+  .main img {
+    position: absolute;
+    animation-name: rotate-circle;
+    animation-direction: reverse;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    filter: drop-shadow(0px 0px 5px #333);
+  }
+
+  .blur {
+    filter: blur(2px); 
+  }
