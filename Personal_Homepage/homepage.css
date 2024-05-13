@@ -1,0 +1,115 @@
+body{
+    font-family:  Courier, monospace;
+    font-size: 6.5rem;
+}
+
+.bigtitle{
+    margin-left: 20px;
+}
+
+.dropbtn {
+    font-family:  Courier, monospace;
+    font-size: 6.5rem;
+    background-color: #4caf4f00;
+    color: rgb(0, 0, 0);
+    margin-left: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: underline black;
+  }
+
+.dropbtn:hover {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+.dropdown-content {
+    position: absolute;
+    margin-left: 20px;
+    text-decoration: underline black;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+
+.one:hover {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+.two:hover {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+.three:hover {
+    font-style: italic;
+    font-weight: bold;
+  }
+
+.oneone:hover{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.twotwo:hover{
+    font-style: italic;
+    font-weight: bold;
+}
+.threethree:hover{
+    font-style: italic;
+    font-weight: bold;
+}
+.fourfour:hover{
+    font-style: italic;
+    font-weight: bold;
+}
+.fivefive:hover{
+    font-style: italic;
+    font-weight: bold;
+}
+.sixsix:hover{
+    font-style: italic;
+    font-weight: bold;
+}
+.sevenseven:hover{
+    font-style: italic;
+    font-weight: bold;
+}
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    background: white;
+    border: none;
+  }
+  
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .popup {
+    position: absolute;
+    font-size: 150px;
+    color: red;
+    cursor: pointer;
+}
+
+.eme{
+    text-decoration: none;
+    color:black;
+}

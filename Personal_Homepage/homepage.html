@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+
+    <title>Cris's Personal Homepage</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js"></script>
+    <meta charset="utf-8" />
+    <title>Cris's Personal Homepage</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="bigtitle">Qiyu Wang</br>Core 2: Interaction</div>
+
+    </br>
+    <button onclick="toggleDropdown('first-dropdown')" class="dropbtn">Studio</button><span>,</span>
+    <button onclick="toggleDropdown('second-dropdown')" class="dropbtn">Lab</button>
+    <div class="dropdown-content hide" id="first-dropdown" style="left:0;">
+        <a href="https://wangq314.github.io/Core-2-Interaction/Project%201/homepage.html" class="one">1: Stories as
+            Networks</a>
+        <a href="https://wangq314.github.io/Core-2-Interaction/Project%202/homepage.html" class="two">2: Elastic
+            Collection</a>
+        <a href="https://wangq314.github.io/Core-2-Interaction/Project%203/homepage.html" class="three">3: Time
+            Spent</a>
+    </div>
+    <div id="second-dropdown" class="dropdown-content hide">
+        <a href="https://assignment-1-embedded-content.glitch.me/" class="oneone">1: Embedded Content</a>
+        <a href="#" class="twotwo">2: Personal Homepage</a>
+        <a href="https://assignment-3-web-typography.glitch.me/" class="threethree">3: Web Typography</a>
+        <a href="https://kind-spiced-virgo.glitch.me/1.html" class="fourfour">4: Multimedia Story</a>
+        <a href="https://assignment-5-digital-zine-risograph.glitch.me/" class="fivefive">5: Digital Zine</a>
+        <a href="https://assignment-6-image-manifesto.glitch.me/" class="sixsix">6: Image Manifesto</a>
+        <a href="https://assignment-7-generative-art-please-flush-the-toliet.glitch.me/" class="sevenseven">7: Themed
+            Collection</a>
+    </div>
+    <a id="startButton" href="#" class="eme">!</a>
+    <script>
+        function toggleDropdown(id) {
+            let elems = document.querySelectorAll(".dropdown-content")
+            for (let i = 0; i < elems.length; i += 1) {
+                let current = elems[i]
+                if (current.id === id) {
+                    if (current.classList.contains('hide')) {
+                        current.classList.remove('hide')
+                        current.classList.add('show')
+                    } else {
+                        current.classList.remove('show')
+                        current.classList.add('hide')
+                    }
+
+                } else {
+                    current.classList.remove('show')
+                    current.classList.add('hide')
+                }
+            }
+
+        }
+
+        function createPopup() {
+            const popup = document.createElement('div');
+            popup.className = 'popup';
+            popup.textContent = 'QIYU WANG';
+            const x = Math.random() * (window.innerWidth - 0); 
+            const y = Math.random() * (window.innerHeight - 0); 
+            popup.style.left = x + 'px';
+            popup.style.top = y + 'px';
+            document.body.appendChild(popup);
+
+            popup.addEventListener('click', function () {
+                document.body.removeChild(popup);
+            });
+        }
+        document.getElementById('startButton').addEventListener('click', function () {
+            const intervalId = setInterval(createPopup, 600);
+
+            
+            setTimeout(function () {
+                clearInterval(intervalId);
+            }, 30000); 
+        });
+    </script>
+</body>
+
+</html>
